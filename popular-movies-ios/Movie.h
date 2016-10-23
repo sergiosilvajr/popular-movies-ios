@@ -6,7 +6,7 @@
 //
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "JSONModel.h"
 
 @interface Movie : JSONModel
@@ -15,5 +15,6 @@
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *overview;
 
+@property (nonatomic) UIImage<Optional> *currentImage;
 -(NSString*)getMovieImageURL;
 @end

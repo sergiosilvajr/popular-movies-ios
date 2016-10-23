@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MovieViewController.h"
 #import "HttpRequests.h"
 #import "MovieTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -20,6 +21,7 @@
 @implementation ViewController
 
 NSArray<Movie *> *movies;
+Movie *selectedMovie;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,8 +39,18 @@ NSArray<Movie *> *movies;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (movies != nil){
         return movies.count;
-    }
+    }	
     return 0;
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier  isEqual: @"movieSegue"]){
+        MovieViewController *movieViewController = segue.destinationViewController;
+        Movie *currentMovie = movies[[self.myTableView indexPathForCell:sender].row];
+        
+        movieViewController.selectedMovie = currentMovie;
+        movieViewController.moviePoster.image = currentMovie.currentImage;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -49,6 +61,8 @@ NSArray<Movie *> *movies;
     
     movieTableViewCell.movieTitleLabel.text = currentMovie.title;
     [movieTableViewCell.imageView sd_setImageWithURL:url];
+    
+    currentMovie.currentImage = movieTableViewCell.imageView.image;
     
     return movieTableViewCell;
 }

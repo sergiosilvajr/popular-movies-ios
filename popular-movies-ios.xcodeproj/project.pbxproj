@@ -10,6 +10,7 @@
 		2052C9A5AB6B4138120D15A0 /* libPods-popular-movies-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 166EE69669A5CD2C2AE2C291 /* libPods-popular-movies-ios.a */; };
 		4C10A0371DBBA3C600E84447 /* HttpRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C10A0361DBBA3C600E84447 /* HttpRequests.m */; };
 		4C10A03A1DBBBCAB00E84447 /* PopularMoviesResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C10A0391DBBBCAB00E84447 /* PopularMoviesResult.m */; };
+		4C13C0BD1DBC6BC3006F446E /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C13C0BC1DBC6BC3006F446E /* MovieViewController.m */; };
 		4C2E8AB61DBB9C4A00ECF0DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2E8AB51DBB9C4A00ECF0DA /* main.m */; };
 		4C2E8AB91DBB9C4A00ECF0DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2E8AB81DBB9C4A00ECF0DA /* AppDelegate.m */; };
 		4C2E8ABC1DBB9C4A00ECF0DA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2E8ABB1DBB9C4A00ECF0DA /* ViewController.m */; };
@@ -45,6 +46,8 @@
 		4C10A0361DBBA3C600E84447 /* HttpRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequests.m; sourceTree = "<group>"; };
 		4C10A0381DBBBCAB00E84447 /* PopularMoviesResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopularMoviesResult.h; sourceTree = "<group>"; };
 		4C10A0391DBBBCAB00E84447 /* PopularMoviesResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularMoviesResult.m; sourceTree = "<group>"; };
+		4C13C0BB1DBC6BC3006F446E /* MovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
+		4C13C0BC1DBC6BC3006F446E /* MovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
 		4C2E8AB11DBB9C4A00ECF0DA /* popular-movies-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "popular-movies-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2E8AB51DBB9C4A00ECF0DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C2E8AB71DBB9C4A00ECF0DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -186,6 +189,8 @@
 			children = (
 				4C2E8ABA1DBB9C4A00ECF0DA /* ViewController.h */,
 				4C2E8ABB1DBB9C4A00ECF0DA /* ViewController.m */,
+				4C13C0BB1DBC6BC3006F446E /* MovieViewController.h */,
+				4C13C0BC1DBC6BC3006F446E /* MovieViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -406,6 +411,7 @@
 				4C2E8AEF1DBBA1F400ECF0DA /* MovieTableViewCell.m in Sources */,
 				4C10A03A1DBBBCAB00E84447 /* PopularMoviesResult.m in Sources */,
 				4C2E8AB61DBB9C4A00ECF0DA /* main.m in Sources */,
+				4C13C0BD1DBC6BC3006F446E /* MovieViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
