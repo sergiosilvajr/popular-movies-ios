@@ -15,7 +15,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
-
 @end
 
 @implementation ViewController
@@ -27,8 +26,6 @@ Movie *selectedMovie;
     [super viewDidLoad];
     
     HttpRequests *httpRequests = [[HttpRequests alloc] init];
-                                  
-   // [httpRequests doHttpRequest:];
     [httpRequests getPopularMoviesList:^(NSArray<Movie *> *movieList){
         movies = movieList;
         [self.myTableView reloadData];
@@ -50,6 +47,7 @@ Movie *selectedMovie;
         
         movieViewController.selectedMovie = currentMovie;
         movieViewController.moviePoster.image = currentMovie.currentImage;
+        NSLog(@"prepareForSegue");
     }
 }
 

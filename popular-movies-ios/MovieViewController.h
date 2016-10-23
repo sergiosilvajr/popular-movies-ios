@@ -10,7 +10,7 @@
 #import "Movie.h"
 
 @interface MovieViewController : ViewController
-@property (weak, nonatomic) IBOutlet UIImageView *moviePoster;
-@property (weak, nonatomic) IBOutlet UILabel *movieDescription;
+@property (weak, nullable, nonatomic) IBOutlet UIImageView *moviePoster;
+@property (weak, nullable, nonatomic) IBOutlet UILabel *movieDescription;
 @property (nonatomic, nonnull) Movie *selectedMovie;
 @end
