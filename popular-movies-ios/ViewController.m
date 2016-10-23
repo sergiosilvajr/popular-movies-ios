@@ -43,9 +43,13 @@ NSArray<Movie *> *movies;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MovieTableViewCell *movieTableViewCell = [tableView dequeueReusableCellWithIdentifier:@"moviecell" forIndexPath:indexPath];
+    Movie *currentMovie = movies[indexPath.row];
     
-    movieTableViewCell.movieTitleLabel.text = movies[indexPath.row].title;
-    [movieTableViewCell.imageView sd_setImageWithURL:[NSURL URLWithString:@"https://upload.wikimedia.org/wikipedia/commons/d/da/Internet2.jpg"]];
+    NSURL *url = [NSURL URLWithString: [currentMovie getMovieImageURL]];
+    
+    movieTableViewCell.movieTitleLabel.text = currentMovie.title;
+    [movieTableViewCell.imageView sd_setImageWithURL:url];
+    
     return movieTableViewCell;
 }
 

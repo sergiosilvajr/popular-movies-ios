@@ -15,4 +15,5 @@
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *overview;
 
+-(NSString*)getMovieImageURL;
 @end

@@ -12,6 +12,7 @@
 
 @interface HttpRequests : NSObject
 
--(void) doHttpRequest:(NSString *)url;
+extern NSString *const IMAGE_BASE_URL;
 -(void) getPopularMoviesList:(void (^)(NSArray<Movie *> *movieList))onMovieList;
+
 @end

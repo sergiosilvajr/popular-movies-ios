@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,21 +30,22 @@
                                             <frame key="frameInset" width="343" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGa-Ew-Uzd">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b9m-tf-vaF"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGa-Ew-Uzd">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b9m-tf-vaF"/>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="OGa-Ew-Uzd" secondAttribute="bottom" constant="50" id="8N9-1o-dCL"/>
-                                                <constraint firstItem="OGa-Ew-Uzd" firstAttribute="leading" secondItem="b9m-tf-vaF" secondAttribute="trailing" constant="32" id="8Px-75-Vwd"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="b9m-tf-vaF" secondAttribute="bottom" id="MHc-lb-Zqg"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="OGa-Ew-Uzd" secondAttribute="trailing" constant="21" id="MSI-bp-QCu"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="b9m-tf-vaF" secondAttribute="leading" id="Oyk-aA-9Zb"/>
-                                                <constraint firstItem="b9m-tf-vaF" firstAttribute="top" secondItem="XgG-b7-T5O" secondAttribute="topMargin" constant="-3" id="aNh-ET-Nii"/>
-                                                <constraint firstItem="OGa-Ew-Uzd" firstAttribute="top" secondItem="XgG-b7-T5O" secondAttribute="topMargin" constant="25" id="rqO-Kk-R7G"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="OGa-Ew-Uzd" secondAttribute="bottom" id="BJd-D0-kiU"/>
+                                                <constraint firstItem="OGa-Ew-Uzd" firstAttribute="leading" secondItem="b9m-tf-vaF" secondAttribute="trailing" constant="8" id="Qxk-BL-lSP"/>
+                                                <constraint firstItem="b9m-tf-vaF" firstAttribute="width" secondItem="XgG-b7-T5O" secondAttribute="width" multiplier="0.5" id="dYG-FI-3hc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="b9m-tf-vaF" secondAttribute="bottom" constant="-0.5" id="dqn-8X-jFt"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="b9m-tf-vaF" secondAttribute="leading" id="guP-wb-ScV"/>
+                                                <constraint firstItem="b9m-tf-vaF" firstAttribute="top" secondItem="XgG-b7-T5O" secondAttribute="topMargin" constant="-3" id="hFd-Zj-LvB"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="OGa-Ew-Uzd" secondAttribute="trailing" id="nWp-LZ-EWi"/>
+                                                <constraint firstItem="OGa-Ew-Uzd" firstAttribute="top" secondItem="XgG-b7-T5O" secondAttribute="topMargin" constant="38" id="xLO-er-lY9"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
