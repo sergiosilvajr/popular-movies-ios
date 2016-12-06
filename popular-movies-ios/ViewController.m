@@ -58,10 +58,11 @@ Movie *selectedMovie;
     NSURL *url = [NSURL URLWithString: [currentMovie getMovieImageURL]];
     
     movieTableViewCell.movieTitleLabel.text = currentMovie.title;
-    [movieTableViewCell.imageView sd_setImageWithURL:url];
+    [movieTableViewCell.imageView sd_setImageWithURL:url completed: ^(UIImage *image,NSError *error, SDImageCacheType cacheType,NSURL* url){
+         [movieTableViewCell setNeedsLayout];
+    }];
     
     currentMovie.currentImage = movieTableViewCell.imageView.image;
-    
     return movieTableViewCell;
 }
 
