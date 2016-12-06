@@ -7,6 +7,7 @@
 //
 
 #import "MovieViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 @interface MovieViewController ()
 
 @end
@@ -16,8 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.moviePoster.image = self.selectedMovie.currentImage;
-    self.movieDescription.text = self.selectedMovie.overview;
+     NSURL *url = [NSURL URLWithString: [self.selectedMovie getMovieImageURL]];
+    
+    [self.moviePoster sd_setImageWithURL:url];
+     self.movieDescription.text = self.selectedMovie.overview;
+    
     // Do any additional setup after loading the view.
 }
 

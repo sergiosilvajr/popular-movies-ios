@@ -14,7 +14,6 @@
 @property (nonatomic) NSString *poster_path;
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *overview;
-
 @property (nonatomic) UIImage<Optional> *currentImage;
 -(NSString*)getMovieImageURL;
 @end
